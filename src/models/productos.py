@@ -5,13 +5,15 @@ class ProductosModel():
     def traerTodos(self):
         cursor = globals.DB.cursor()
 
-        cursor.execute('select * from productos ')
+        cursor.execute('show databases ')
 
         productos = cursor.fetchall()
 
         cursor.close()
 
         return productos
+
+
 
     def crear(self, nombre,descripcion,precio_compra, precio_venta,estado):
         cursor = globals.DB.cursor()
